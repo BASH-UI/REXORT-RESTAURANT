@@ -27,6 +27,7 @@ const cartButtons = document.querySelectorAll(".add-to-cart");
 // SELECT THE CART DISPLAY
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
+const cartCount = document.getElementById("cart-count");
 
 // ADD FOOD TO CART
 cartButtons.forEach(function(button) {
@@ -80,6 +81,13 @@ function displayCart() {
         `;
 
         cartItems.appendChild(cartItem);
+        let itemCount = 0;
+
+cart.forEach(function(item) {
+    itemCount += item.quantity;
+});
+
+cartCount.textContent = itemCount;
     });
 
     cartTotal.textContent = total.toLocaleString();
@@ -138,7 +146,18 @@ checkoutForm.addEventListener("submit", function(event) {
     });
 
     orderSummary += "\nTotal: ₦" + total.toLocaleString();
+alert(orderSummary + "\n\nThank you for ordering from Rexort Restaurant!");
 
-    alert(orderSummary);
+cart = [];
+displayCart();
+checkoutForm.reset();
+    
 });
 
+// CLEAR CART
+const clearCartButton = document.getElementById("clear-cart");
+
+clearCartButton.addEventListener("click", function() {
+    cart = [];
+    displayCart();
+});

@@ -183,6 +183,47 @@ footer {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
 
+    header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 70px 5%;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .about,
+    .menu,
+    .contact,
+    .cart {
+        padding: 55px 5%;
+    }
+
+    .checkout {
+        padding: 22px;
+        margin-top: 40px;
+    }
+
+    .cart-item {
+        padding: 18px;
+    }
+
+
     .navbar {
         flex-direction: column;
         gap: 20px;
@@ -322,4 +363,36 @@ footer {
     border: none;
     cursor: pointer;
     margin-top: 10px;
+}
+
+/* CART ITEM DESIGN */
+.cart-item {
+    background-color: #f7eee4;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.cart-item h3 {
+    color: #3b2920;
+    margin-bottom: 10px;
+}
+
+.cart-item p {
+    margin: 8px 0;
+}
+
+.cart-item button {
+    background-color: #c66b45;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    margin: 10px 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #a95031;
 }
