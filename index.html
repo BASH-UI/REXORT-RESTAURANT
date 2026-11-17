@@ -108,10 +108,16 @@
             <p>EXPLORE OUR FOOD</p>
             <h2>Our Popular Dishes</h2>
         </div>
-
+<div class="menu-filters">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="nigerian">Nigerian</button>
+    <button class="filter-btn" data-category="fast-food">Fast Food</button>
+    <button class="filter-btn" data-category="drinks">Drinks</button>
+</div>
         <div class="menu-container">
 
             <div class="menu-card">
+                <div class="menu-card" data-category="nigerian"></div>
                 <div class="food-image">
     <img src="images/jollof-rice.png" alt="Nigerian Jollof Rice">
 </div>
@@ -124,7 +130,9 @@
             </div>
 
             <div class="menu-card">
+               <div class="menu-card" data-category="fast-food"></div> 
                 <div class="food-image">
+
     <img src="images/pizza.png" alt="Italian Pizza">
 </div>
                 <h3>Italian Pizza</h3>
@@ -136,6 +144,7 @@
             </div>
 
             <div class="menu-card">
+                <div class="menu-card" data-category="fast-food"></div>
                 <div class="food-image">
     <img src="images/burger.png" alt="Classic Burger">
 </div>
@@ -148,6 +157,7 @@
             </div>
 
 <div class="menu-card">
+    <div class="menu-card" data-category="drinks"></div>
     <div class="food-image">
         <img src="images/boba-tea.png" alt="Refreshing Boba Tea">
     </div>

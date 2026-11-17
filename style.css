@@ -81,12 +81,17 @@ header {
     max-width: 560px;
 }
 
-.hero-images img {
+.food-image img {
     width: 100%;
-    height: 420px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover .food-image img {
+    transform: scale(1.03);
 }
 
 .subtitle {
@@ -150,16 +155,17 @@ header {
 }
 
 .menu-card {
-    background-color: white;
-    padding: 25px;
-    border-radius: 12px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    box-shadow: 0 6px 20px rgba(59, 41, 32, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(59, 41, 32, 0.15);
 }
 
 .food-image {
@@ -416,4 +422,31 @@ footer {
 
 .cart-item button:hover {
     background-color: #a95031;
+}
+
+/* MENU FILTER BUTTONS */
+
+.menu-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background-color: #fff;
+    color: #3b2920;
+    border: 1px solid #c66b45;
+    padding: 11px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #c66b45;
+    color: white;
 }

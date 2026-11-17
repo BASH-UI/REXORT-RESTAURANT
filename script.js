@@ -160,4 +160,37 @@ const clearCartButton = document.getElementById("clear-cart");
 clearCartButton.addEventListener("click", function() {
     cart = [];
     displayCart();
+});// MENU CATEGORY FILTER
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const menuCards = document.querySelectorAll(".menu-card");
+
+filterButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+
+        const selectedCategory = button.dataset.category;
+
+        menuCards.forEach(function(card) {
+
+            const cardCategory = card.dataset.category;
+
+            if (selectedCategory === "all" ||
+                selectedCategory === cardCategory) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+        });
+
+        filterButtons.forEach(function(btn) {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+    });
 });
+
